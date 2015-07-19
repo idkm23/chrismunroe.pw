@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+@media screen and (max-width: 560px) {
+	#slimeLink {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 852px) {
+	#smallButton {
+		display: block;
+		clear: left;
+		float: center;
+	}
+	
+	#abWrap {
+		margin: 75px 20% 0 20%;
+		text-align: center;
+	}
+	
+	#welcome {
+		//top: 200px;	
+	}
+}
+
+@media screen and (min-width: 853px) {
+	#mainButton {
+	    margin: 0 100px 0 0; /*Spacing main nav from the buttons*/
+	}
+}

@@ -9,46 +9,23 @@ body {
 INC/NAVBAR
 #######################*/
 
-#ball {
-  display: none;
-  height: 100px;
-  width: 100px;
-  background-color: #9c9;
-  border-radius: 50%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  cursor: pointer;
-  z-index: -1;
-}
-
-#ballWalls {
+#main {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: -2;
-  background-color: #eee;
-}
-
-#myCanvas { 
-	background: #224;
-    //background: #532c58;
-	position: fixed;
-    z-index: -300;	
-    top: 0;
-    left: 0; 
-	width: 100%;
-    height: 100%;    
+  background-color: #C63D0F;
 }
 
 #navBar {
-	margin: 50px 0 0 0;
-	background: #222;
+	margin: 0 0 0 0;
+	background: #FDF3E7;
     text-align: center;
     height: 75px;
     line-height: 75px;
+	border-bottom: 2px solid #3B3738;
 }
 
 .menu {
@@ -62,40 +39,29 @@ INC/NAVBAR
 .menu li {
 	display: inline-block;	
     list-style-type: none;
-    color: #eee;    
+    color: #3B3738;    
     font-size: 1.3em;
 }
 
 .menu a, .menu a:visited {
-	color: #eee;
+	color: #7E8F7C;
 	text-decoration: none;
 }
 
+.menu a:hover {
+	color: #8F9F8D;
+}
+
 #mainButton li:hover {
-	background-color: #333;
+	background-color: #ECE2D6;
 }
 
 #mainButton li {	
-	text-shadow: 2px 2px #111;
 	padding: 0 30px;  
 }
 
 #smallButton li {
 	padding: 0 10px;
-}
-
-.navIcon {
-	font-family: 'Lobster', cursive;
-    background-color: #000;
-    border-radius: 50%;
-    height: 45px;
-    width: 45px;
-    line-height: 45px;
-}
-
-.navIcon:hover {
-	background-color: #eee;
-    color: #000;
 }
 
 /*####################
@@ -114,10 +80,7 @@ HOME
 }
 
 #welcome p, #welcome h1 {
-
-    text-shadow: 1px 1px #aaa;
-    color: #222;
-    
+    color: #FDF3E7;
 }
 
 /*##############################
@@ -133,9 +96,9 @@ body {
 	display: inline-block;
     width: 60%;
     margin: 3% 0 0 0;
-    background-color: rgba(10, 10, 10, 0.5);
-    border: 15px inset rgba(50, 50, 50, 0.5);
-    color: #eee;
+    background-color: #FDF3E7; //rgba(10, 10, 10, 0.5);
+    border: 15px solid rgba(1, 1, 1, 0.1);
+    color: #3B3738;
     
     -webkit-animation-name: aPhase;
     -webkit-animation-iteration-count: once;
@@ -164,11 +127,11 @@ body {
 }
 
 #abInWrap a, #abInWrap:visited{
-	color: #eee;
+	color: #6D7E6B;
 }
 
 #abInWrap a:hover {
-	color: #ccf;	
+	color: #8F9F8D;	
 }
 
 

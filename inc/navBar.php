@@ -6,14 +6,12 @@
 		<link rel = "stylesheet" href = "css/normalize.css">
         <link rel= "icon" href= "res/slime.ico">
 		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		<link rel = "stylesheet" href = "css/main.php">
         <link rel = "stylesheet" href = "css/responsive.css">
 	</head>
     
-	<body id = "ballWalls">
-    
-        <div id = "ball" onclick="speedUp()"></div>
+	<body id = "main">
 
     	<div id="navBar">
         	<ul id = "mainButton" class = "menu">
@@ -22,11 +20,20 @@
             </ul>
             
             <ul id = "smallButton" class = "menu">
-            	<li><a href = "http://www.dotabuff.com/players/74675113"><div class = "navIcon">D</div></a></li>
-                <li><a href = "http://123hype.tumblr.com/"><div class = "navIcon">t</div></a></li>
+            	<li><a href = "http://www.github.com/idkm23">
+                	<span class="fa-stack fa-lg" >
+                    	<i class="fa fa-circle fa-stack-2x" class="navIcon"></i>
+                    	<i class="fa fa-git fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a></li>
+                <li><a href = "htpp://www.google.com">
+                	<span class="fa-stack fa-lg" >
+                    	<i class="fa fa-circle fa-stack-2x" class="navIcon"></i>
+                    	<i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a></li>
             </ul>
         </div>         
-        <!-- <canvas id="myCanvas" width = 1000px height = 2000px></canvas>-->
         
         <script src = "background.js"></script>
 

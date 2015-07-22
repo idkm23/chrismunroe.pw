@@ -8,5 +8,4 @@
             <p>Fall of 2015 I will be a full-time student and working as a TA for Professor Rahimi in her Programming II class.  I am unavailable for work during this time. I am looking for work in the summer of 2016.</p>
             <p><a href = "resume.pdf">Check out my Résumé</a></p>
         </div>
-        
     </div>

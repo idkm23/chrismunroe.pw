@@ -15,11 +15,18 @@
 	
 	#abWrap {
 		margin: 75px 20% 0 20%;
+	}
+	
+	#etWrap {
+		margin-top: 75px;
+	}
+	
+	#abInWrap {
 		text-align: center;
 	}
 	
 	#welcome {
-		//top: 200px;	
+		top: 200px;	
 	}
 }
 

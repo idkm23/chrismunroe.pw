@@ -1,14 +1,14 @@
-var BASE_SPEED = 6, MAX_SPEED = 40;
+var BASE_SPEED = 6, MAX_SPEED = 40, RADIUS = 8;
 var bckDiv = document.getElementById("main");
-var ball_count = 0, BALL_COUNT_MAX = 30;
+var ball_count = 0, BALL_COUNT_MAX = 100;
 
 function Ball() {
 	if(ball_count > BALL_COUNT_MAX)
 		return;
 	
 	this.id = ball_count;
-	this.x = Math.random() * (bckDiv.offsetWidth - 100);
-	this.y = Math.random() * (bckDiv.offsetHeight - 100);
+	this.x = Math.random() * (bckDiv.offsetWidth - RADIUS);
+	this.y = Math.random() * (bckDiv.offsetHeight - RADIUS);
 	this.speed = BASE_SPEED;
 	this.theta = Math.random() * Math.PI * 2;
 	this.div = document.createElement("div" + ball_count++);
@@ -17,8 +17,8 @@ function Ball() {
 
 Ball.prototype.styleDiv = function() {
   	this.div.style.display = "none";
-	this.div.style.height = "100px";
-  	this.div.style.width = "100px";
+	this.div.style.height = RADIUS + "px";
+  	this.div.style.width = RADIUS + "px";
   	this.div.style.background = "#3B3738";
   	this.div.style.borderRadius = "50%";
   	this.div.style.position = "absolute";
@@ -32,7 +32,7 @@ Ball.prototype.styleDiv = function() {
 }
 
 function isObstructed(a, b) {
-  	return (a < 0 || a + 100 > bckDiv.offsetWidth || b < 0 || b + 100 > bckDiv.offsetHeight);
+  	return (a < 0 || a + RADIUS > bckDiv.offsetWidth || b < 0 || b + RADIUS > bckDiv.offsetHeight);
 }
 
 var step_x, step_y, xAndStep, yAndStep;
@@ -55,7 +55,7 @@ Ball.prototype.move = function() {
 	  		if(xAndStep < 0)
 	  			this.x = -xAndStep;
 	  		else
-	  			this.x = 2*(bckDiv.offsetWidth - 100) - xAndStep; 
+	  			this.x = 2*(bckDiv.offsetWidth - RADIUS) - xAndStep; 
 		
     	}
 		if(isObstructed(this.x, yAndStep)) {
@@ -66,7 +66,7 @@ Ball.prototype.move = function() {
 			if(yAndStep < 0)
 				this.y = -yAndStep;
 			else
-				this.y = 2*(bckDiv.offsetHeight - 100) - yAndStep;
+				this.y = 2*(bckDiv.offsetHeight - RADIUS) - yAndStep;
 			
 		}
 	}

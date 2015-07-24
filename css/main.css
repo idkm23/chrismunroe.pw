@@ -13,16 +13,16 @@ INC/NAVBAR
   width: 100%;
   height: 100%;
   z-index: -2;
-  background-color: #C63D0F;
+  background-color: #3B5998;
 }
 
 #navBar {
 	margin: 0 0 0 0;
-	background: #FDF3E7;
+	background: #293E6A;
     text-align: center;
     height: 75px;
     line-height: 75px;
-	border-bottom: 2px solid #3B3738;
+	border-bottom: 2px solid #fff;
 }
 
 .menu {
@@ -36,12 +36,12 @@ INC/NAVBAR
 .menu li {
 	display: inline-block;	
     list-style-type: none;
-    color: #3B3738;    
+    color: #fff;    
     font-size: 1.3em;
 }
 
 .menu a, .menu a:visited {
-	color: #7E8F7C;
+	color: #3B5998;
 	text-decoration: none;
     transition: color .15s ease-in-out;
     -moz-transition: color .15s ease-in-out;
@@ -49,7 +49,7 @@ INC/NAVBAR
 }
 
 .menu a:hover {
-	color: #8F9F8D;
+	color: #639BF1;
 }
 
 #mainButton li {	
@@ -60,7 +60,7 @@ INC/NAVBAR
 }
 
 #mainButton li:hover {
-	background-color: #ECE2D6;
+	background-color: #3B5998;
 }
 
 #smallButton li {
@@ -80,10 +80,7 @@ HOME
     left: 50%;
     margin: 0 0 0 -50%;
     -webkit-transition: top .7s;
-}
-
-#welcome p, #welcome h1 {
-    color: #FDF3E7;
+	color: #fff;
 }
 
 /*##############################
@@ -99,10 +96,10 @@ body {
 	display: inline-block;
     width: 60%;
     margin: 3% 0 0 0;
-    background-color: #FDF3E7; //rgba(10, 10, 10, 0.5);
-    border: 15px solid rgba(1, 1, 1, 0.1);
+    background-color: #fff; //rgba(10, 10, 10, 0.5);
+    border: 15px solid rgba(1, 1, 1, 0.14);
     color: #3B3738;
-    
+	
     -webkit-animation-name: aPhase;
     -webkit-animation-iteration-count: once;
     -webkit-animation-timing-function: ease-out;
@@ -130,11 +127,11 @@ body {
 }
 
 #abInWrap a, #abInWrap:visited{
-	color: #6D7E6B;
+	color: #A69744;	
 }
 
 #abInWrap a:hover {
-	color: #8F9F8D;	
+	color: #B6A754;
 }
 
 /*##################

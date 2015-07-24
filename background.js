@@ -1,6 +1,6 @@
-var BASE_SPEED = 6, MAX_SPEED = 40, RADIUS = 8;
+var BASE_SPEED = 6, MAX_SPEED = 40, RADIUS = 16;
 var bckDiv = document.getElementById("main");
-var ball_count = 0, BALL_COUNT_MAX = 100;
+var ball_count = 0, BALL_COUNT_MAX = 30;
 
 function Ball() {
 	if(ball_count > BALL_COUNT_MAX)
@@ -19,7 +19,7 @@ Ball.prototype.styleDiv = function() {
   	this.div.style.display = "none";
 	this.div.style.height = RADIUS + "px";
   	this.div.style.width = RADIUS + "px";
-  	this.div.style.background = "#3B3738";
+  	this.div.style.background = "#77BA9B";
   	this.div.style.borderRadius = "50%";
   	this.div.style.position = "absolute";
   	this.div.style.top = this.x + "px";
@@ -27,7 +27,7 @@ Ball.prototype.styleDiv = function() {
   	this.div.style.cursor = "pointer";
   	this.div.style.zIndex = "-1";
 	this.div.style.display = "block";
-    this.div.style.opacity = ".4";
+    this.div.style.opacity = ".7";
 	document.body.appendChild(this.div);
 }
 

@@ -1,6 +1,6 @@
 var BASE_SPEED = 6, MAX_SPEED = 40, RADIUS = 30;
 var bckDiv = document.getElementById("main");
-var ball_count = 0, BALL_COUNT_MAX = 10;
+var ball_count = 0, BALL_COUNT_MAX = 20;
 var balls = [];
 
 function Ball() {
@@ -72,7 +72,7 @@ Ball.prototype.move = function() {
 		
     	}
 		if(isObstructed(this.x, yAndStep)) {
-				
+		    		
 			this.theta = 2*Math.PI - this.theta;
 			
 			//have extra count towards new theta
@@ -83,34 +83,26 @@ Ball.prototype.move = function() {
 			
 		}
 	}
-
-  for(i = 0; i < ball_count; i++) {
-      if(isTouching(this, balls[i]))
-      {
-          var delta_x = this.x - balls[i].x;
-			    var delta_y = this.y - balls[i].y;
-			    var pure_angle = Math.atan(Math.abs(delta_y / delta_x));
-          
-			    if(delta_y / delta_x < 0)
-				  {    
-              this.theta = Math.PI - pure_angle;  
-              balls[i].theta = 2*Math.PI - pure_angle;
-          }
-          else
-          {
-              this.theta = Math.PI;
-              balls[i].theta = Math.PI + pure_angle;
-          }    
-          
-			    if(this.y < balls[i].y)
-          {
-              var hold = this.theta;  
-              this.theta = balls[i].theta;
-              balls[i].theta = hold;
-          }
+    
+    for(i = 0; i < ball_count; i++) {
+        if(isTouching(this, balls[i]))
+        {
+            var delta_x = this.x - balls[i].x;
+			var delta_y = this.y - balls[i].y;
+			var pure_angle = Math.atan(delta_y / delta_x);
+        
+            this.theta = pure_angle;  
+            balls[i].theta = Math.PI + pure_angle;
 			    
-      }
-  }
+			if((this.y < balls[i].y && delta_y / delta_x >= 0) 
+                || (this.y >= balls[i].y && delta_y / delta_x < 0))
+            {
+                var hold = this.theta;  
+                this.theta = balls[i].theta;
+                balls[i].theta = hold;
+            }
+		}
+    }
   
 	this.div.style.left = this.x + "px";
 	this.div.style.top = this.y + "px";

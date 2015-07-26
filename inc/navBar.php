@@ -11,8 +11,11 @@
         <link rel = "stylesheet" href = "css/responsive.css">
 	</head>
     
-	<body id = "main">
-
+	<body>
+		
+        <div id = "background">
+        </div>
+        
     	<div id="navBar">
         	<ul id = "mainButton" class = "menu">
             	<a href = "index"><li>HOME</li></a>

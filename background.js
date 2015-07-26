@@ -1,5 +1,5 @@
 var BASE_SPEED = 6, MAX_SPEED = 40, RADIUS = 30;
-var bckDiv = document.getElementById("main");
+var bckDiv = document.getElementById("background");
 var ball_count = 0, BALL_COUNT_MAX = 20;
 var balls = [];
 
@@ -12,7 +12,7 @@ function Ball() {
 	this.y = Math.random() * (bckDiv.offsetHeight - RADIUS*2);
 	this.speed = BASE_SPEED;
 	this.theta = Math.random() * Math.PI * 2;
-	this.div = document.createElement("div" + ball_count++);
+	this.div = document.createElement("ball_" + ball_count++);
 	this.styleDiv();
 }
 
@@ -22,7 +22,7 @@ Ball.prototype.styleDiv = function() {
   	this.div.style.width = RADIUS*2 + "px";
   	this.div.style.background = "#77BA9B";
   	this.div.style.borderRadius = "50%";
-  	this.div.style.position = "absolute";
+  	this.div.style.position = "fixed";
   	this.div.style.top = this.x + "px";
   	this.div.style.left = this.y + "px";
   	this.div.style.cursor = "pointer";

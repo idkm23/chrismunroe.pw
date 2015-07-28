@@ -168,3 +168,26 @@ ETHICS PROJECT
 	float: right;
 	margin: 2%;
 }
+
+.round_putin img {
+	width: 300px;
+	height: 300px;
+	float: left; 
+	-webkit-shape-outside: circle(); 
+	shape-outside: circle();
+	text-align: center;
+	border-radius: 50%; 
+	margin-right: 2rem;
+	margin-top: .4rem;
+	opacity: 1;
+	-webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+.round_putin img:hover {
+	opacity: .84;
+	cursor: pointer;
+}

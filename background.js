@@ -1,4 +1,4 @@
-var BASE_SPEED = 6, MAX_SPEED = 40, RADIUS = 30;
+var BASE_SPEED = 6, MAX_SPEED = 40, BASE_RADIUS = 10;
 var bckDiv = document.getElementById("background");
 var ball_count = 0, BALL_COUNT_MAX = 20;
 var balls = [];
@@ -8,18 +8,19 @@ function Ball() {
 		return;
 	
 	this.id = ball_count;
-	this.x = Math.random() * (bckDiv.offsetWidth - RADIUS*2);
-	this.y = Math.random() * (bckDiv.offsetHeight - RADIUS*2);
+	this.x = Math.random() * (bckDiv.offsetWidth - BASE_RADIUS*2);
+	this.y = Math.random() * (bckDiv.offsetHeight - BASE_RADIUS*2);
 	this.speed = BASE_SPEED;
 	this.theta = Math.random() * Math.PI * 2;
+	this.radius = Math.random() * 25 + BASE_RADIUS;
 	this.div = document.createElement("ball_" + ball_count++);
 	this.styleDiv();
 }
 
 Ball.prototype.styleDiv = function() {
   	this.div.style.display = "none";
-	this.div.style.height = RADIUS*2 + "px";
-  	this.div.style.width = RADIUS*2 + "px";
+	this.div.style.height = this.radius*2 + "px";
+  	this.div.style.width = this.radius*2 + "px";
   	this.div.style.background = "#77BA9B";
   	this.div.style.borderRadius = "50%";
   	this.div.style.position = "fixed";
@@ -32,20 +33,20 @@ Ball.prototype.styleDiv = function() {
 	document.body.appendChild(this.div);
 }
 
-function isObstructed(a, b) {
-  	return (a < 0 || a + RADIUS*2 > bckDiv.offsetWidth || b < 0 || b + RADIUS*2 > bckDiv.offsetHeight);
+function isObstructed(a, b, radius) {
+  	return (a < 0 || a + radius*2 > bckDiv.offsetWidth || b < 0 || b + radius*2 > bckDiv.offsetHeight);
 }
 
 function isTouching(ballA, ballB) {
     if(ballA == ballB)
         return false;
   
-    var a_x = ballA.x + RADIUS;
-    var b_x = ballB.x + RADIUS;
-    var a_y = ballA.y + RADIUS;
-    var b_y = ballB.y + RADIUS;
+    var a_x = ballA.x + ballA.radius;
+    var b_x = ballB.x + ballB.radius;
+    var a_y = ballA.y + ballA.radius;
+    var b_y = ballB.y + ballB.radius;
     
-    return (Math.sqrt( Math.pow(a_x - b_x, 2) + Math.pow(a_y - b_y, 2) ) < RADIUS*2);
+    return (Math.sqrt( Math.pow(a_x - b_x, 2) + Math.pow(a_y - b_y, 2) ) < ballA.radius + ballB.radius);
 }
 
 var step_x, step_y, xAndStep, yAndStep;
@@ -55,11 +56,11 @@ Ball.prototype.move = function() {
     xAndStep = this.x + step_x;
     yAndStep = this.y + step_y;
    
-	if (!isObstructed(xAndStep, yAndStep)) {
+	if (!isObstructed(xAndStep, yAndStep, this.radius)) {
 		this.x += step_x;
 		this.y += step_y;
 	} else {
-		if(isObstructed(xAndStep, this.y)) {
+		if(isObstructed(xAndStep, this.y, this.radius)) {
       
       		if((this.theta = Math.PI - this.theta) < 0)
           		this.theta += 2*Math.PI;
@@ -68,10 +69,10 @@ Ball.prototype.move = function() {
 	  		if(xAndStep < 0)
 	  			this.x = -xAndStep;
 	  		else
-	  			this.x = 2*(bckDiv.offsetWidth - RADIUS*2) - xAndStep; 
+	  			this.x = 2*(bckDiv.offsetWidth - this.radius*2) - xAndStep; 
 		
     	}
-		if(isObstructed(this.x, yAndStep)) {
+		if(isObstructed(this.x, yAndStep, this.radius)) {
 		    		
 			this.theta = 2*Math.PI - this.theta;
 			
@@ -79,7 +80,7 @@ Ball.prototype.move = function() {
 			if(yAndStep < 0)
 				this.y = -yAndStep;
 			else
-				this.y = 2*(bckDiv.offsetHeight - RADIUS*2) - yAndStep;
+				this.y = 2*(bckDiv.offsetHeight - this.radius*2) - yAndStep;
 			
 		}
 	}

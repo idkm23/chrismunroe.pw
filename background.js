@@ -18,18 +18,11 @@ function Ball() {
 }
 
 Ball.prototype.styleDiv = function() {
-  	this.div.style.display = "none";
+	this.div.className = "ball";
 	this.div.style.height = this.radius*2 + "px";
   	this.div.style.width = this.radius*2 + "px";
-  	this.div.style.background = "#77BA9B";
-  	this.div.style.borderRadius = "50%";
-  	this.div.style.position = "fixed";
   	this.div.style.top = this.x + "px";
   	this.div.style.left = this.y + "px";
-  	this.div.style.cursor = "pointer";
-  	this.div.style.zIndex = "-1";
-	this.div.style.display = "block";
-    this.div.style.opacity = ".7";
 	document.body.appendChild(this.div);
 }
 

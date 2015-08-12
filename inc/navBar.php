@@ -8,16 +8,14 @@
 		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		<link rel = "stylesheet" href = "css/main.css">
-        <link rel = "stylesheet" href = "css/responsive.css"><script src="http://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
-<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <link rel = "stylesheet" href = "css/responsive.css">
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	</head>
     
 	<body>
 		
         <div id = "background"></div>
-        
-        <div id = "blackOverlay"></div>
-        <div id = "emailBoxWrap" class = "hideEmail"><div id = "emailBox">Email me at: idkm23@gmail.com</div></div>
         
     	<div id="navBar">
         	<ul id = "mainButton" class = "menu">
@@ -40,6 +38,13 @@
                 </a></li>
             </ul>
         </div>         
+        
+        <div id = "blackOverlay"></div>
+        <div id = "emailBoxWrap" class = "hideEmail">
+        	<div id = "emailBox">
+                Email me at: idkm23@gmail.com
+            </div>
+        </div>
         
         <script src = "background.js"></script>
         

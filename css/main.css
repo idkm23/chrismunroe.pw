@@ -15,6 +15,17 @@ INC/NAVBAR
   background-color: #3B5998;
 }
 
+.ball {
+	
+  	display: none;
+  	background: #77BA9B;
+  	border-radius: 50%;
+  	position: fixed;
+  	z-index: -1;
+	display: block;
+    opacity: .7;
+}
+
 #navBar {
 	position: fixed;
 	z-index: 100;
@@ -129,6 +140,7 @@ HOME
     margin: 0 0 0 -50%;
     -webkit-transition: top .7s;
 	color: #fff;
+	pointer-events: none;
 }
 
 /*##############################

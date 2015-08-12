@@ -19,18 +19,24 @@
         
     	<div id="navBar">
         	<ul id = "mainButton" class = "menu">
-            	<a href = "index"><li>HOME</li></a>
-                <a href = "about"><li>ABOUT</li></a>
+            	<a href = "index" title = "Home"><li>HOME</li></a>
+                <a href = "about" title = "About"><li>ABOUT</li></a>
             </ul>
             
             <ul id = "smallButton" class = "menu">
-            	<li><a href = "http://www.github.com/idkm23">
+                <li><a href = "resume.pdf" title = "Resume">
+                	<span class="fa-stack fa-lg" >
+                    	<i class="fa fa-circle fa-stack-2x" class="navIcon"></i>
+                    	<i class="fa fa-file-pdf-o fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a></li>
+            	<li><a href = "http://www.github.com/idkm23" title = "Github">
                 	<span class="fa-stack fa-lg" >
                     	<i class="fa fa-circle fa-stack-2x" class="navIcon"></i>
                     	<i class="fa fa-git fa-stack-1x fa-inverse"></i>
                     </span>
                 </a></li>
-                <li><a id = "email_me_button">
+                <li><a id = "email_me_button" title = "Email">
                 	<span class="fa-stack fa-lg" >
                     	<i class="fa fa-circle fa-stack-2x" class="navIcon"></i>
                     	<i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>

@@ -14,7 +14,7 @@
 	}
 	
 	#abWrap {
-		margin: 75px 20% 0 20%;
+		margin: 175px 20% 0 20%;
 	}
 	
 	#etWrap {
@@ -23,6 +23,14 @@
 	
 	#abInWrap {
 		text-align: center;
+	}
+	
+	.menu a, .menu a:visited {
+		color: #293E6A;
+	}
+
+	.menu a:hover {
+		color: #639BF1;
 	}
 	
 	#welcome {

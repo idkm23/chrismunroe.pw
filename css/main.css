@@ -154,11 +154,19 @@ body {
 #abWrap, #etWrap {
     overflow: hidden;
 	display: inline-block;
-    width: 60%;
-    margin: 7.5% 0 0 0;
+    width: 50%;
+    margin: 120px 0 0 0;
     background-color: #fff; //rgba(10, 10, 10, 0.5);
     border: 15px solid rgba(1, 1, 1, 0.14);
     color: #3B3738;
+}
+
+#abWrap {
+	padding: 20px;
+}
+
+#etWrap {
+	padding: 50px 0;
 }
 
 #abInWrap, #etInWrap {
@@ -168,7 +176,7 @@ body {
 }
 
 #abInWrap p, #etInWrap {
-	margin: 5%;
+	margin: 1% 5% 5% 5%;
 }
 
 #abInWrap a, #abInWrap:visited{

@@ -1,5 +1,6 @@
 <?php
  if(!function_exists('apache_get_modules') ){ phpinfo(); exit; }
+ phpinfo(); exit;
  $res = 'Module Unavailable';
  if(in_array('mod_rewrite',apache_get_modules())) 
  $res = 'Module Available';

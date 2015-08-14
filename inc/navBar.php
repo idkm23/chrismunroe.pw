@@ -20,6 +20,7 @@
     	<div id="navBar">
         	<ul id = "mainButton" class = "menu">
             	<a href = "index" title = "Home"><li>HOME</li></a>
+                <a href = "projects" title = "Projects"><li>PROJECTS</li></a>
                 <a href = "about" title = "About"><li>ABOUT</li></a>
             </ul>
             

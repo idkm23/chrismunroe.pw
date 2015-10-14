@@ -20,7 +20,6 @@
     	<div id="navBar">
         	<ul id = "mainButton" class = "menu">
             	<a href = "index" title = "Home"><li>HOME</li></a>
-                <a href = "projects" title = "Projects"><li>PROJECTS</li></a>
                 <a href = "about" title = "About"><li>ABOUT</li></a>
             </ul>
             
@@ -31,7 +30,14 @@
                     	<i class="fa fa-file-pdf-o fa-stack-1x fa-inverse"></i>
                     </span>
                 </a></li>
-            	<li><a href = "http://www.github.com/idkm23" title = "Github">
+            	<li><a href = "https://www.linkedin.com/in/munroechristopher" title = "LinkedIn">
+                	<span class="fa-stack fa-lg" >
+                    	<i class="fa fa-circle fa-stack-2x" class="navIcon"></i>
+                    	<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a></li>
+                </a></li>
+            	<li><a href = "http://www.github.com/idkm23" title = "GitHub">
                 	<span class="fa-stack fa-lg" >
                     	<i class="fa fa-circle fa-stack-2x" class="navIcon"></i>
                     	<i class="fa fa-git fa-stack-1x fa-inverse"></i>

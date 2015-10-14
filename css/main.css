@@ -37,6 +37,7 @@ INC/NAVBAR
     height: 75px;
     line-height: 75px;
 	border-bottom: 2px solid #9cc;
+	min-width: 470px;
 }
 
 .menu {
@@ -155,14 +156,14 @@ body {
     overflow: hidden;
 	display: inline-block;
     width: 50%;
-    margin: 120px 0 0 0;
+    margin: 120px 0 3% 0;
     background-color: #fff; //rgba(10, 10, 10, 0.5);
     border: 15px solid rgba(1, 1, 1, 0.14);
     color: #3B3738;
 }
 
 #abWrap {
-	padding: 20px;
+	margin-bottom: 100px;
 }
 
 #etWrap {
@@ -193,7 +194,7 @@ ETHICS PROJECT
 
 #etWrap {
 	width: 80%;
-	margin-bottom: 3%;s
+	margin-bottom: 3%;
 }
 
 #etInWrap {
@@ -242,4 +243,39 @@ ETHICS PROJECT
 .round_putin img:hover {
 	opacity: .84;
 	cursor: pointer;
+}
+
+/*#######################
+PROJECTS
+#######################*/
+
+#project_wrap {
+	display: inline-block;
+	margin: 120px 0 20px 0;
+	background-color: rgb(204,51,102);
+	padding: 0 20px 20px 20px;
+	width: 50%;
+}
+
+#project_inner_wrap {
+	display: inline-block;
+	text-align: left;
+}
+
+.project_div {
+	width: 300px;
+	height: 300px;
+	float: left;
+	
+	background: white;
+	margin: 1em;
+	padding: 1.2em;
+	overflow: hidden;
+}
+
+.left_project_div {
+	clear: left;
+}
+
+.project_div img {
 }

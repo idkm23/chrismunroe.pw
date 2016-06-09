@@ -1,6 +1,6 @@
-var BASE_SPEED = 4, MAX_SPEED = 40, BASE_RADIUS = 10;
+var BASE_SPEED = 4, MAX_SPEED = 40, BASE_RADIUS = 55;
 var bckDiv = document.getElementById("background");
-var ball_count = 0, BALL_COUNT_MAX = 20;
+var ball_count = 0, BALL_COUNT_MAX = 8;
 var balls = [];
 
 function Ball() {
@@ -10,7 +10,7 @@ function Ball() {
 	this.id = ball_count;
 	this.vx = BASE_SPEED * (Math.random() - 0.5) * 2;
   this.vy = BASE_SPEED * (Math.random() - 0.5) * 2;
-	this.radius = Math.random() * 25 + BASE_RADIUS;
+	this.radius = BASE_RADIUS;
   do {
 	  this.x = Math.random() * (bckDiv.offsetWidth - this.radius*2);
 	  this.y = Math.random() * (bckDiv.offsetHeight - this.radius*2);
@@ -142,11 +142,11 @@ while(ball_count < BALL_COUNT_MAX) {
 }
 
 function moveBalls() {
+	requestAnimationFrame(moveBalls);
+    
 	for(j = 0; j < ball_count; j++) {
 		balls[j].move();
 	}
-  
-	setTimeout(moveBalls, 10);
 }
 
 moveBalls();
